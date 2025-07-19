@@ -1,0 +1,15 @@
+version: '3.9'
+
+services:
+
+  mqtt:
+    container_name: mosquitto-mqtt
+    image: eclipse-mosquitto:latest
+    volumes:
+      - ./mosquitto/config:/mosquitto/config
+      - ./mosquitto/data:/mosquitto/data
+      - ./mosquitto/log:/mosquitto/log
+    ports:
+      - 1883:1883
+      - 9001:9001
+    restart: unless-stopped
