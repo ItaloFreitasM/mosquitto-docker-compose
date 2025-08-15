@@ -6,9 +6,10 @@ services:
     container_name: mosquitto-mqtt
     image: eclipse-mosquitto:latest
     volumes:
-      - ./mosquitto/config:/mosquitto/config
-      - ./mosquitto/data:/mosquitto/data
-      - ./mosquitto/log:/mosquitto/log
+      - ./config/mosquitto.conf:/mosquitto/config/mosquitto.conf
+      - ./config/passwd:/mosquitto/config/passwd
+      - ./data:/mosquitto/data
+      - ./log:/mosquitto/log
     ports:
       - 1883:1883
       - 9001:9001
