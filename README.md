@@ -71,7 +71,6 @@ docker run --rm -it \
 #### No diretório raiz (`mosquitto/`), edite o `docker-compose.yml` conforme necessário:
 
 ```bash
-version: '3.9'
 
 services:
 
